@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+</head>
+<style>
+    body{
+        margin:0px;
+        padding: 0px;
+        background-color: bisque;
+        display:grid;
+
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: 80px 200px 70px repeat(3,350px) 350px;
+    }
+
+    .navmenbar{
+        position:sticky;
+        top:0px;
+        background-color: blueviolet;
+        display:grid;
+        grid-template-columns: 1,1fr;
+        a{
+            color:white;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 15px;
+        }
+    }
+    .navbar{
+        background-color: rgb(222, 214, 214);
+        display:flex;
+        justify-content:space-around;
+        align-items: center;
+
+    }
+    .searchbar input,button{
+        padding:5px;
+    }
+    input,button,a{
+        font-size: 14px;
+    }
+    input{
+        width:100px;
+    }
+    .signup{
+        background-image: url("https://static.vecteezy.com/system/resources/thumbnails/001/060/223/small/rocket-is-flying-in-galaxy-space-of-the-universe.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+    .signup button{
+        padding: 10px;
+        margin: 10px;
+        border: none;
+        border-radius: 10px;
+        box-shadow:0px 0px 10px greenyellow;
+        
+    }
+    .signup button:hover{
+        background-color: green;
+    }
+    .feature1{
+        background-color: rgb(180, 99, 194);
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows:150px 150px;
+        padding:15px;
+        grid-gap:15px;
+    }
+    .feature1 .img{
+        box-shadow: 5px 5px 15px rgb(154, 63, 228);
+    }
+    .feature2{
+        background-color: cadetblue;
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        padding:10px;
+        grid-gap:10px;
+        
+    }
+    .feature2 .sec1,.sec2{
+        border:1px solid rgb(22, 216, 222);
+        border-radius: 10px;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+    .feature3{
+        background-color: cadetblue;
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        padding:10px;
+        grid-gap:10px;
+    }
+    .feature3 .sec1,.sec2{
+        border:1px solid rgb(22, 216, 222);
+        border-radius: 10px;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+    .feature4{
+        background-color: cadetblue;
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        padding:10px;
+        grid-gap:10px;
+    }
+    .feature4 .sec1,.sec2{
+        border:1px solid rgb(22, 216, 222);
+        border-radius: 10px;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+    @media (min-width:577px) and (max-width:768px) {
+        body{
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: 100px 250px 350px repeat(3,350px);
+            
+        }
+        .searchbar input,button{
+            padding:10px;
+        }
+        .navbar .searchbar input{
+            width:250px;
+        }
+        .navmenbar{
+            font-size: 15px;
+        }
+        .navmenbar{
+            grid-column: 1/span 2;
+        }
+        .header{
+            grid-column: 1/span 2;
+        }
+        .feature1{
+            grid-area:3/1/4/3;
+        }
+
+    }
+    @media (min-width:769px) {
+        body{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            grid-template-rows: 100px 250px 100px 380px 400px ;
+        }
+        .searchbar input{
+            width:350px;
+        }
+        .searchbar input,button{
+            padding:10px;
+        }
+        .navmenbar{
+            grid-column: 1/ span 3;
+        }
+        .header{
+            grid-column: 1/span 3;
+        }
+        .signup{
+            grid-column: 1/span 3;
+        }
+        .feature1{
+            grid-area:5/1/6/4;
+        }
+        .feature2 .sec2{
+            display: none;
+        }
+        .feature3 .sec2{
+            display:none;
+        }
+        .feature4 .sec2{
+            display:none;
+        }
+        .feature2 .sec1{
+            width:220px;
+        }
+        .feature3 .sec1{
+            width:220px;
+        }
+        .feature4 .sec1{
+            width:220px;
+        }
+        
+    }
+</style>
+<body>
+    <header class=" box navmenbar">
+        <div class="navbar">
+            <div class="searchbar">
+                <input type="text" placeholder="Search here">
+                <button>search</button>
+            </div>
+            <div class="items">
+                <a href="">Services</a>
+                <a href="">About</a>
+                <span><a href="">Contact Us</a></span>
+                <span class="material-icons">home</span>
+            </div>
+        </div>
+        <div class="menubar">
+            <span class="material-symbols-outlined">menu</span>
+            <a href="">Buy Again</a>
+            <a href="">Products You visited</a>
+            <a href="">Wish List</a>
+            <a href="">Cart</a>
+        </div>
+    </header>
+    <section class="box header">
+            <img src="https://c4.wallpaperflare.com/wallpaper/418/116/876/5bd4369c73870-wallpaper-preview.jpg" alt="" width="100%" height="100%">
+    </section>
+    <section class="box signup">
+        <button>SignUp</button>
+        <button>Register</button>
+    </section>
+    <section class="box feature1">
+        <div class="img" id="img1"><img src="https://images.pexels.com/photos/1778412/pexels-photo-1778412.jpeg?cs=srgb&dl=pexels-borevina-1778412.jpg&fm=jpg" alt="" width="100%" height="100%"></div>
+        <div class="img" id="img2"><img src="https://www.tbsnews.net/sites/default/files/styles/infograph/public/images/2023/06/20/design_living_room_3_0.jpg" alt="" width="100%" height="100%"></div>
+        <div class="img" id="img3"><img src="https://st3.depositphotos.com/12647580/15304/i/450/depositphotos_153048182-stock-photo-young-women-with-shopping-bags.jpg" alt="" width="100%" height="100%"></div>
+        <div class="img" id="img4"><img src="https://bergnerhome.in/cdn/shop/articles/Header-Banner-1.png?v=1718542473&width=2048" alt="" width="100%" height="100%"></div>
+    </section>
+    <section class="box feature2">
+        <div class="sec1"> 
+            <img src="https://img.freepik.com/free-photo/young-handsome-man-choosing-clothes-shop_1303-19720.jpg" alt="text" width="100%" height="70%" style="border-radius: 10px;">
+            <p><a href="" style="font-size:17px;">See more</a></p>
+        </div>
+        <div class="sec2">
+            <img src="https://media.istockphoto.com/id/1189091313/photo/handsome-man-shopping-for-new-clothes-in-store.jpg?s=612x612&w=0&k=20&c=TxJ4B339e64K70sFgw3RU1xDsi7N0LDBZyT9pB29H64=" alt="text" width="100%" height="70%" style="border-radius: 10px;">
+            <p><a href="" style="font-size:17px;">See more</a></p>
+        </div>
+    </section>
+    <section class="box feature3">
+        <div class="sec1">
+            <img src="https://cdn.shopify.com/s/files/1/0266/6276/4597/files/floral_ethnic_wear_for_kids_by_utsa.jpg?v=1597833877" alt="text" width="100%" height="70%" style="border-radius: 10px;">
+            <p><a href="" style="font-size:17px;">See more</a></p>
+        </div>
+        <div class="sec2">
+            <img src="https://images.jdmagicbox.com/quickquotes/images_main/girls-boys-golden-western-dance-costume-on-hiring-2226655210-kar4mraf.jpg" alt="text" width="100%" height="70%" style="border-radius: 10px;">
+            <p><a href="" style="font-size:17px;">See more</a></p>
+        </div>
+    </section>
+    <section class="box feature4">
+        <div class="sec1"> 
+            <img src="https://food-ubc.b-cdn.net/wp-content/uploads/2020/02/Save-Money-On-Groceries_UBC-Food-Services.jpg" alt="text" width="100%" height="70%" style="border-radius: 10px;">
+            <p><a href="" style="font-size:17px;">See more</a></p>
+        </div>
+        <div class="sec2">
+            <img src="https://m.media-amazon.com/images/I/81ZX-dvnU1L._AC_UF1000,1000_QL80_.jpg" alt="text" width="100%" height="70%" style="border-radius: 10px;">
+            <p><a href="" style="font-size:17px;">See more</a></p>
+        </div>
+    </section>
+
+</body>
+</html>
